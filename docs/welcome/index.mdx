@@ -9,38 +9,83 @@ import {Boundary, TrainingMedia, VerifyLive} from '@site/src/components/Callouts
 
 # Welcome to the Wamule Operations Platform
 
-**Wamule Development** uses the **Wamule Operations Platform** to manage its housing projects, available lots, buyer inquiries, applications, reservations, customers, contracts, payments, collections, and post-sale activities.
+**Wamule Development** uses the **Wamule Operations Platform** to manage the operational journey of a housing-project buyer—from the first inquiry through lot selection, application review, contracting, payment tracking, collections, and post-sale follow-up.
 
-The platform brings the company’s sales, administrative, and financial workflows into one central system. It helps staff maintain accurate records, follow each buyer’s progress, manage lot availability, record payments, identify overdue accounts, and coordinate the work required after a sale.
+The platform brings sales, administration, inventory, and financial coordination into one central system. Instead of relying on separate notebooks, messages, and spreadsheets, staff can use connected records to see what has happened, who owns the next action, and what still needs attention.
 
-This guide explains the platform’s features, the responsibilities of each user, and the recommended workflows for managing Wamule Development’s daily operations.
+This guide is both a reference manual and a recommended way of working. It explains what each area does, why the information matters, how records move through the business, and what staff should verify before making a decision.
 
 <Boundary>
-The Wamule Operations Platform is a custom workflow system used by Wamule Development. It is not currently presented as a commercial software subscription or public marketplace product.
+The Wamule Operations Platform is a custom workflow system used by Wamule Development. It supports staff decisions and record-keeping, but it does not replace human approval, legal review, accounting controls, or management responsibility.
 </Boundary>
+
+## What the platform helps Wamule manage
+
+| Business area | What is managed in the platform | Why it matters |
+| --- | --- | --- |
+| Sales pipeline | Inquiries, leads, activities, follow-ups, site visits, lot interest, and reservations | Staff can see where each buyer is in the process and what should happen next. |
+| Lot inventory | Available, reserved, and sold lots together with key parcel information | Staff can avoid promising the same lot to more than one buyer and can answer availability questions consistently. |
+| Applications | Applicant information, preferred lot, review status, notes, and linked sales context | Authorized staff can perform a documented review and preserve the reason for the decision. |
+| Customer and contract records | Approved buyers, contract details, payment-plan context, and account history | Sales and administration can work from the same customer record after approval. |
+| Payments and collections | Payment entries, receipt information, proof, outstanding balances, requests, and follow-up | Financial activity can be checked, traced, and followed up instead of being held only in messages. |
+| Post-sale work | Checklists, assigned tasks, due dates, blockers, and completion history | Important work after a sale is less likely to be missed. |
+| Management oversight | Dashboard priorities, Daily Brief, reports, and Audit Trail | Managers can identify exceptions and confirm whether the underlying records are current. |
+
+## How records connect
+
+A buyer may first appear as an inquiry or application and then be represented by several related records as the relationship develops. These records serve different purposes:
+
+1. A **lead** records sales ownership, contact history, interest, and the next action.
+2. A **site visit** records a planned or completed visit; it does not reserve a lot.
+3. A **reservation** records a temporary operational hold; it is not proof of payment or a completed sale.
+4. An **application** records the buyer's submitted information and the human review decision.
+5. An approved buyer becomes a **customer**, whose account may have one or more contracts and payment records.
+6. **Payments** and **collections** record financial activity and follow-up separately from the sales pipeline.
+7. **Post-sales tasks** track the work required after the agreement or sale moves forward.
+
+Keeping these distinctions clear prevents a sales status from being mistaken for a financial or legal event.
+
+## Recommended operating principle
+
+Every active buyer record should answer four questions:
+
+1. **Where are they now?** — the current stage or status is truthful.
+2. **Who owns the work?** — a named staff member is responsible.
+3. **What happens next?** — a specific next action is recorded.
+4. **When is it due?** — the follow-up or task has a realistic date.
+
+When one of these is missing, the buyer is at greater risk of being forgotten or receiving inconsistent information.
 
 ## Start here
 
-- New staff: read [Signing in](../getting-started/signing-in), [User roles](../getting-started/roles), and the [First-day checklist](../getting-started/first-day-checklist).
-- Daily operators: start with [Start-of-day workflow](../daily-operations/start-of-day).
-- Sales staff: follow the [Buyer journey](../sales-buyer-journey/overview).
-- Finance and collections staff: use [Financial Operations](../financial-operations/responsibilities-and-recording).
-- Supervisors: review [Launch and Training](../launch-training/readiness-checklists) and [Administration](../administration/company-and-configuration).
+- **New staff:** read [Signing in](../getting-started/signing-in), [User roles](../getting-started/roles), [Navigation overview](../getting-started/navigation), and the [First-day checklist](../getting-started/first-day-checklist).
+- **Daily operators:** begin with the [Start-of-day workflow](../daily-operations/start-of-day) and end with the [Post-sales and end-of-day workflow](../daily-operations/post-sales-end-of-day).
+- **Sales staff:** follow the [Sales and buyer journey](../sales-buyer-journey/overview).
+- **Finance and collections staff:** use [Financial Operations](../financial-operations/responsibilities-and-recording) and the [Payment recording SOP](../sops/payment-recording).
+- **Supervisors:** review [Weekly management review](../daily-operations/weekly-review), [Reports](../feature-guides/reports), and [Administration](../administration/company-and-configuration).
 
 ## How to use this guide
 
-Use the sidebar to find a feature, workflow, or SOP. Articles state what the system does, who owns the work, the record to update, and what must be checked before moving forward. The search icon searches this guide locally in your browser.
+Use the sidebar when you know the area you need. Use search when you know the task or term but not the page. Most detailed pages contain:
 
-:::tip Keep the record current
-The platform is most useful when each buyer has an accurate stage, a named owner, a recorded next action, and a clear activity history.
+- the purpose of the feature;
+- when staff should use it;
+- a step-by-step operating procedure;
+- status or data-quality guidance;
+- a realistic example;
+- common mistakes and escalation conditions; and
+- suggested screenshots or short training videos.
+
+:::tip Open the source record
+Dashboard cards, reports, AI summaries, and briefings help identify work. Open the linked lead, application, customer, contract, reservation, payment, or task before changing a status or making a business decision.
 :::
 
 <VerifyLive>
-Some recently implemented workflows require confirmation in an authorized test environment before staff rely on them in live operations. These articles are marked **Verify before live use**.
+Some recently implemented workflows still require confirmation in an authorized test environment before staff rely on them in live operations. These articles are marked **Verify before live use** and explain what must be tested.
 </VerifyLive>
 
 <TrainingMedia>
-Screenshots and walkthroughs will be added only after safe training media is approved. They must use fictional records and a visible **Training Data** marker.
+All screenshots and videos must use fictional records, test accounts, and a visible **Training Data** marker. Never publish customer names, signatures, contract documents, bank references, receipt numbers, access credentials, or production configuration.
 </TrainingMedia>
 
 ## Platform terminology
@@ -48,10 +93,22 @@ Screenshots and walkthroughs will be added only after safe training media is app
 | Term | Meaning |
 | --- | --- |
 | Wamule Development | The land-development and housing-project business. |
-| Wamule Operations Platform | The internal system documented here. |
+| Wamule Operations Platform | The custom internal system documented in this guide. |
 | Lead | A buyer inquiry or sales prospect being followed up by staff. |
+| Activity | A dated record of meaningful contact, a note, or an operational event. |
+| Follow-up | A future action that needs an owner and due date. |
+| Site visit | A scheduled or completed property visit; it does not hold a lot. |
 | Reservation | A temporary operational hold; it is not a payment or completed sale. |
-| Deposit readiness | A status used to track expected/received evidence; it is not financial reconciliation. |
+| Deposit readiness | A status used to track expected or received evidence; it is not financial reconciliation. |
+| Customer | An approved or established buyer record used for contracts and account activity. |
 | Audit Trail | Accountable history for supported actions and changes. |
 
 See the complete [glossary](../reference/glossary).
+
+## Suggested training media
+
+**Screenshot space:** Add a full-width screenshot of the logged-in Dashboard using fictional Training Data. Label the main navigation, priority queues, lot summary, collections alerts, and the path to open an underlying record. This image should help a new user understand the platform at a glance.
+
+**Diagram space:** Add a simple buyer-record relationship diagram showing Inquiry → Lead → Site Visit → Reservation → Application → Customer → Contract → Payments and Collections → Post-sale. Clearly mark that a site visit is not a reservation and a reservation is not a payment.
+
+**Video space:** Record a 4–6 minute orientation that starts at the Dashboard, opens one fictional lead, follows its linked application and preferred lot, then opens the resulting customer and payment history. The goal is to explain how records connect—not to demonstrate every button.
