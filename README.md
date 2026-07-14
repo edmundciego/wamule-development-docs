@@ -67,7 +67,7 @@ Wamule application repository
 
 The active deployment workflow is `.github/workflows/deploy-pages.yml`. Pull requests run the production build for validation. Merges to `main` build and deploy the static site to GitHub Pages.
 
-The custom domain is stored in `static/CNAME`. DNS for `docs.wamuledevelopment.com` must point to `edmundciego.github.io` through the domain's Cloudflare DNS zone. GitHub provisions HTTPS after the DNS record resolves and the Pages site accepts the custom domain.
+Because this site uses a custom GitHub Actions workflow, the custom domain is configured in the repository's **Settings → Pages** screen rather than through a `CNAME` file in the source tree. Set the custom domain to `docs.wamuledevelopment.com` there first. Then add a Cloudflare DNS record with type `CNAME`, name `docs`, target `edmundciego.github.io`, proxy status **DNS only**, and TTL **Auto**. GitHub can enforce HTTPS after the domain validates and its certificate is issued.
 
 ## Content-review process
 
