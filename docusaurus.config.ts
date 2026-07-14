@@ -1,6 +1,7 @@
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {siteConfig} from './src/config/site';
+import remarkMediaPlaceholder from './src/remark/remarkMediaPlaceholder';
 
 const config: Config = {
   title: siteConfig.productName,
@@ -8,12 +9,12 @@ const config: Config = {
   favicon: 'img/favicon-placeholder.svg',
   url: 'https://docs.wamuledevelopment.com',
   baseUrl: '/',
-  organizationName: 'wamule-development',
+  organizationName: 'edmundciego',
   projectName: 'wamule-development-docs',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   i18n: {defaultLocale: 'en', locales: ['en']},
-  markdown: {hooks: {onBrokenMarkdownLinks: 'warn'}},
+  markdown: {hooks: {onBrokenMarkdownLinks: 'throw'}},
   presets: [
     [
       'classic',
@@ -25,6 +26,7 @@ const config: Config = {
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           breadcrumbs: true,
+          remarkPlugins: [remarkMediaPlaceholder],
         },
         blog: false,
         pages: false,
