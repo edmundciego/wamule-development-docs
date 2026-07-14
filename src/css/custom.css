@@ -26,13 +26,13 @@
   --ifm-color-primary-darker: #4ba36a;
   --ifm-color-primary-darkest: #348653;
   --ifm-color-primary-light: #92c6a3;
-  --ifm-color-primary-lighter: #9fccaD;
+  --ifm-color-primary-lighter: #9fccad;
   --ifm-color-primary-lightest: #c5e2cd;
   --ifm-background-color: #122019;
   --ifm-background-surface-color: #17271e;
   --ifm-font-color-base: #ecf4ed;
   --ifm-font-color-secondary: #c3d1c6;
-  --ifm-link-color: #9fccaD;
+  --ifm-link-color: #9fccad;
 }
 
 html { scroll-behavior: smooth; }
@@ -52,5 +52,66 @@ h1, h2, h3 { text-wrap: balance; letter-spacing: -0.02em; }
 .wamule-media { background: color-mix(in srgb, #1f6b45 10%, transparent); }
 .wamule-verify { background: color-mix(in srgb, #2563eb 10%, transparent); }
 .training-placeholder { padding: 1rem; border: 1px dashed var(--ifm-color-emphasis-400); border-radius: 0.45rem; color: var(--ifm-font-color-secondary); }
-@media (max-width: 996px) { .navbar__title { font-size: 0.88rem; } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+
+.wamule-media-placeholder {
+  position: relative;
+  display: flex;
+  min-height: 320px;
+  margin: 2rem 0;
+  padding: 6.5rem 1.5rem 1.4rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border: 2px dashed color-mix(in srgb, var(--ifm-color-primary) 48%, var(--ifm-color-emphasis-400));
+  border-radius: 0.8rem;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--ifm-color-primary) 8%, transparent), transparent 60%),
+    repeating-linear-gradient(135deg, transparent, transparent 16px, color-mix(in srgb, var(--ifm-color-primary) 5%, transparent) 16px, color-mix(in srgb, var(--ifm-color-primary) 5%, transparent) 32px);
+  color: var(--ifm-font-color-secondary);
+}
+
+.wamule-media-placeholder::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(90%, 32rem);
+  transform: translate(-50%, -58%);
+  content: 'Screenshot or training walkthrough';
+  text-align: center;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  font-weight: 750;
+  color: var(--ifm-font-color-base);
+}
+
+.wamule-media-placeholder::after {
+  position: absolute;
+  top: calc(50% + 2rem);
+  left: 50%;
+  width: min(90%, 38rem);
+  transform: translateX(-50%);
+  content: 'Replace this space with approved Training Data media. Do not use real customer information.';
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.wamule-media-placeholder strong {
+  display: inline-block;
+  margin-right: 0.25rem;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .wamule-media-placeholder {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--ifm-color-primary) 12%, transparent), transparent 60%),
+    repeating-linear-gradient(135deg, transparent, transparent 16px, rgb(255 255 255 / 0.025) 16px, rgb(255 255 255 / 0.025) 32px);
+}
+
+@media (max-width: 996px) {
+  .navbar__title { font-size: 0.88rem; }
+  .wamule-media-placeholder { min-height: 250px; padding-top: 5.25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
