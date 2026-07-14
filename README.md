@@ -34,7 +34,17 @@ npm run serve
 
 ## Screenshots, videos, and diagrams
 
-Articles that end with a `**Media:**` recommendation automatically display a large screenshot or walkthrough placeholder on the published site. This keeps deliberate space in the layout until approved training media is ready.
+Use these labels to create visible page-specific training-media slots:
+
+```md
+**Screenshot space:** Describe the exact screen, state, fields, and annotations to capture.
+
+**Video space:** Describe the scenario, steps, boundaries, and recommended duration.
+
+**Diagram space:** Describe the workflow, owners, decision points, and verification gates.
+```
+
+Legacy `**Media:**` recommendations also render as a planned-media card, but new and revised pages should use the specific labels above. The published card displays the recommendation text so the future asset owner knows exactly what should replace it.
 
 Put approved media in `static/media/` and reference it from the related article. Use only test accounts and fictional records. Every asset must show **Training Data** and be reviewed for contact data, signatures, receipt numbers, bank references, documents, credentials, tokens, configuration, and audit exports.
 
@@ -44,9 +54,9 @@ Example screenshot markup:
 ![Dashboard overview using fictional Training Data](/media/screenshots/dashboard-overview.webp)
 ```
 
-After adding the approved image or video, remove the article's `**Media:**` placeholder line so the empty frame no longer appears.
+After adding and reviewing the approved image, video, or diagram, remove the corresponding placeholder paragraph so the empty card no longer appears.
 
-Use approved accessible SVG workflow diagrams or simple text flows. Do not include secrets or personal data in diagrams.
+The detailed shot list, filenames, capture standards, and privacy review are in [`docs/reference/media-plan.md`](docs/reference/media-plan.md).
 
 ## Search
 
@@ -67,7 +77,7 @@ Wamule application repository
 
 The active deployment workflow is `.github/workflows/deploy-pages.yml`. Pull requests run the production build for validation. Merges to `main` build and deploy the static site to GitHub Pages.
 
-Because this site uses a custom GitHub Actions workflow, the custom domain is configured in the repository's **Settings → Pages** screen rather than through a `CNAME` file in the source tree. Set the custom domain to `docs.wamuledevelopment.com` there first. Then add a Cloudflare DNS record with type `CNAME`, name `docs`, target `edmundciego.github.io`, proxy status **DNS only**, and TTL **Auto**. GitHub can enforce HTTPS after the domain validates and its certificate is issued.
+Because this site uses a custom GitHub Actions workflow, the custom domain is configured in the repository's **Settings → Pages** screen rather than through a `CNAME` file in the source tree. The custom domain is `docs.wamuledevelopment.com`. Its Cloudflare DNS record is a DNS-only `CNAME` from `docs` to `edmundciego.github.io`.
 
 ## Content-review process
 
