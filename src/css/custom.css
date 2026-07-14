@@ -44,7 +44,9 @@ h1, h2, h3 { text-wrap: balance; letter-spacing: -0.02em; }
 .hero__title { max-width: 19ch; margin-inline: auto; }
 .hero__subtitle { max-width: 54ch; margin-inline: auto; }
 .markdown > h2 { margin-top: 3.5rem; padding-top: 0.35rem; }
-.markdown img { border-radius: 0.45rem; border: 1px solid var(--ifm-color-emphasis-200); }
+.markdown > h3 { margin-top: 2.25rem; }
+.markdown img { border-radius: 0.6rem; border: 1px solid var(--ifm-color-emphasis-200); box-shadow: 0 0.7rem 2rem rgb(22 45 32 / 0.08); }
+.markdown table { display: table; width: 100%; }
 .pagination-nav__link { border: 1px solid var(--ifm-color-emphasis-300); }
 .wamule-callout { margin: 1.25rem 0; padding: 1rem 1.1rem; border: 1px solid var(--ifm-color-emphasis-300); border-radius: 0.45rem; }
 .wamule-callout strong { display: block; margin-bottom: 0.25rem; }
@@ -54,61 +56,78 @@ h1, h2, h3 { text-wrap: balance; letter-spacing: -0.02em; }
 .training-placeholder { padding: 1rem; border: 1px dashed var(--ifm-color-emphasis-400); border-radius: 0.45rem; color: var(--ifm-font-color-secondary); }
 
 .wamule-media-placeholder {
+  --media-accent: var(--ifm-color-primary);
   position: relative;
   display: flex;
-  min-height: 320px;
+  min-height: 235px;
   margin: 2rem 0;
-  padding: 6.5rem 1.5rem 1.4rem;
+  padding: 5.2rem 1.4rem 1.35rem;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
-  border: 2px dashed color-mix(in srgb, var(--ifm-color-primary) 48%, var(--ifm-color-emphasis-400));
-  border-radius: 0.8rem;
+  border: 2px dashed color-mix(in srgb, var(--media-accent) 52%, var(--ifm-color-emphasis-400));
+  border-radius: 0.85rem;
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--ifm-color-primary) 8%, transparent), transparent 60%),
-    repeating-linear-gradient(135deg, transparent, transparent 16px, color-mix(in srgb, var(--ifm-color-primary) 5%, transparent) 16px, color-mix(in srgb, var(--ifm-color-primary) 5%, transparent) 32px);
+    linear-gradient(135deg, color-mix(in srgb, var(--media-accent) 10%, transparent), transparent 58%),
+    repeating-linear-gradient(135deg, transparent, transparent 16px, color-mix(in srgb, var(--media-accent) 4%, transparent) 16px, color-mix(in srgb, var(--media-accent) 4%, transparent) 32px);
   color: var(--ifm-font-color-secondary);
 }
 
 .wamule-media-placeholder::before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(90%, 32rem);
-  transform: translate(-50%, -58%);
-  content: 'Screenshot or training walkthrough';
-  text-align: center;
-  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
-  font-weight: 750;
+  top: 1.25rem;
+  left: 1.4rem;
+  content: 'Planned training media';
+  font-size: 1.1rem;
+  font-weight: 780;
   color: var(--ifm-font-color-base);
 }
 
 .wamule-media-placeholder::after {
   position: absolute;
-  top: calc(50% + 2rem);
-  left: 50%;
-  width: min(90%, 38rem);
-  transform: translateX(-50%);
-  content: 'Replace this space with approved Training Data media. Do not use real customer information.';
-  text-align: center;
-  font-size: 0.9rem;
+  top: 1.2rem;
+  right: 1.2rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--media-accent) 35%, transparent);
+  border-radius: 999px;
+  content: 'Training Data only';
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ifm-font-color-secondary);
+  background: color-mix(in srgb, var(--ifm-background-surface-color) 88%, transparent);
 }
 
+.wamule-media-placeholder--screenshot { --media-accent: #1f6b45; min-height: 310px; }
+.wamule-media-placeholder--screenshot::before { content: 'Screenshot space'; }
+.wamule-media-placeholder--video { --media-accent: #7b5133; min-height: 255px; }
+.wamule-media-placeholder--video::before { content: 'Video walkthrough space'; }
+.wamule-media-placeholder--diagram { --media-accent: #2563eb; min-height: 245px; }
+.wamule-media-placeholder--diagram::before { content: 'Workflow diagram space'; }
+
 .wamule-media-placeholder strong {
-  display: inline-block;
-  margin-right: 0.25rem;
+  display: block;
+  margin-bottom: 0.45rem;
   color: var(--ifm-font-color-base);
 }
 
+.wamule-media-placeholder p:last-child { margin-bottom: 0; }
+
 [data-theme='dark'] .wamule-media-placeholder {
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--ifm-color-primary) 12%, transparent), transparent 60%),
+    linear-gradient(135deg, color-mix(in srgb, var(--media-accent) 15%, transparent), transparent 58%),
     repeating-linear-gradient(135deg, transparent, transparent 16px, rgb(255 255 255 / 0.025) 16px, rgb(255 255 255 / 0.025) 32px);
 }
 
 @media (max-width: 996px) {
   .navbar__title { font-size: 0.88rem; }
-  .wamule-media-placeholder { min-height: 250px; padding-top: 5.25rem; }
+  .wamule-media-placeholder { min-height: 220px; padding-top: 5.4rem; }
+  .wamule-media-placeholder--screenshot { min-height: 260px; }
+}
+
+@media (max-width: 640px) {
+  .wamule-media-placeholder::after { position: static; align-self: flex-start; order: -1; margin-bottom: 1rem; }
+  .wamule-media-placeholder { padding-top: 4.6rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
