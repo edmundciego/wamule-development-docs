@@ -16,7 +16,7 @@ const sidebars: SidebarsConfig = {
       'sales-buyer-journey/site-visit', 'sales-buyer-journey/reservation-deposit', 'sales-buyer-journey/application-to-contract',
     ]},
     {type: 'category', label: 'Feature Guides', items: [
-      'feature-guides/dashboard', 'feature-guides/daily-brief', 'feature-guides/email-center',
+      'feature-guides/dashboard', 'feature-guides/operational-attention', 'feature-guides/daily-brief', 'feature-guides/email-center',
       'feature-guides/leads', 'feature-guides/lead-activities', 'feature-guides/follow-up-tasks', 'feature-guides/site-visits',
       'feature-guides/lots', 'feature-guides/reservations', 'feature-guides/deposit-readiness', 'feature-guides/applications',
       'feature-guides/possible-duplicate-indicators', 'feature-guides/customers', 'feature-guides/customer-detail', 'feature-guides/contracts',

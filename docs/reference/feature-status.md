@@ -6,11 +6,11 @@ title: Feature status and operational boundaries
 
 ## Ready to document
 
-The source includes the public forms, protected CRM routes, dashboard, leads, tasks, site visits, lots, applications, customers, contracts, payments, collections, reports, settings, audit trail, and feedback controls.
+The source includes the public forms, protected CRM routes, dashboard, Operational Attention drill-downs, leads, tasks, site visits, lots, applications, customers, contracts, payments, collections, reports, settings, audit trail, and feedback controls.
 
 ## Implemented but verify live
 
-Application-to-lead automation, public-inquiry routing, reservations/deposit workflow, post-sales work, AI summaries, Daily Brief, Email Center, and privileged data management need authorized test-account confirmation of deployed migrations, Edge Functions, permissions, secrets, and business rules.
+Application-to-lead automation, public-inquiry routing, reservations/deposit workflow, post-sales work, AI summaries, Operational Attention, Daily Brief, Email Center, and privileged data management need authorized test-account confirmation of deployed migrations, Edge Functions, permissions, secrets, and business rules.
 
 ## Partial boundaries
 
