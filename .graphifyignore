@@ -1,0 +1,14 @@
+# Dependencies and generated Docusaurus output
+node_modules/
+build/
+.docusaurus/
+coverage/
+
+# Graphify output must not index itself
+graphify-out/
+
+# Repository metadata and dependency lockfile noise
+.git/
+package-lock.json
+
+# Keep docs/, src/, static/media/, configuration, templates, and scripts indexed.
